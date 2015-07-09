@@ -6,8 +6,9 @@ button {
     border-radius: 50px;
     background: #ECEEF1;
     color: #3C4C53;
-    -webkit-transition: background-color 0.3s, color 0.3s;
-    transition: background-color 0.3s, color 0.3s;
+    -webkit-transition: background-color 0.5s, color 0.5s;
+    transition: background-color 0.5s, color 0.5s;
+    outline: none;
 }
 button::before {
     content: '';
@@ -26,17 +27,17 @@ button::before {
 
 
 button.clicked {
-    -webkit-transition: background-color 0.1s 0.3s, color 0.1s 0.3s;
-    transition: background-color 0.1s 0.3s, color 0.1s 0.3s;
+    -webkit-transition: background-color 0.1s 0.5s, color 0.1s 0.5s;
+    transition: background-color 0.1s 0.5s, color 0.1s 0.5s;
     color: #ECEFF1;
     background-color: #7986CB;
-    -webkit-animation: anim-moema-1 0.3s forwards;
-    animation: anim-moema-1 0.3s forwards;
+    -webkit-animation: anim-moema-1 0.5s forwards;
+    animation: anim-moema-1 0.5s forwards;
 }
 
 button.clicked::before {
-    -webkit-animation: anim-moema-2 0.3s 0.3s forwards;
-    animation: anim-moema-2 0.3s 0.3s forwards;
+    -webkit-animation: anim-moema-2 0.5s 0.5s forwards;
+    animation: anim-moema-2 0.5s 0.5s forwards;
 }
 @-webkit-keyframes anim-moema-1 {
     60% {
