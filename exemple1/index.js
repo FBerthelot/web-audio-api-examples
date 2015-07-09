@@ -5,7 +5,13 @@
 
 window.onload = function() {
 
-    document.getElementById('beep').onclick = function() {
+    document.getElementById('beep').onclick = function(e) {
+        //just styling
+        e.target.classList.add('clicked');
+        setTimeout(function() {
+            e.target.classList.remove('clicked');
+        }, 3000);
+
         var audioContext = new AudioContext();
         var oscillator = audioContext.createOscillator();
         oscillator.connect(audioContext.destination);

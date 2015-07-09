@@ -1,0 +1,12 @@
+body, html {
+    background-color: #37474F;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+}
+button {
+    margin: auto;
+}
