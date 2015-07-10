@@ -29,11 +29,10 @@ La troisième ligne connecte l'oscillateur à la destination du contexte audio. 
 Enfin la dernière ligne démarre l’oscillateur immédiatement, notre LA est joué.
 
 #####Attention avec le garbage collector
-Les fuites mémoires sont très facile a réaliser avec l'API, en effet les référence si vous perdez la référence vers un nœud il est impossible pour vous d'aller là rechercher. Par exemple si vous exécutez le code de l'exemple au dessus dans une fonction onClick d'un bouton vous aurez a chaque clique un nouveau oscillateur de créer. Firefox vous montrera alors ce genre de graphs: 
+Les fuites mémoires sont très facile a réaliser avec l'API, en effet les référence si vous perdez la référence vers un nœud il est impossible pour vous d'aller là rechercher. Par exemple si vous exécutez le code de l'exemple au dessus dans une fonction onClick d'un bouton vous aurez a chaque clique un nouveau oscillateur de créer. Firefox vous montrera alors ce genre de graphs:
+
 ![image d'illustration](https://raw.githubusercontent.com/FBerthelot/web-audio-api-examples/gh-pages/images/garbage_collector.png)
 Vous pouvez d'ailleurs tester à [cette adresse](http://fberthelot.github.io/web-audio-api-examples/exemple1) la fuite mémoire.
-
-Quelques librairies permettent de palier à ce problème comme 
 
 ####L'API est en avance sur le temps
 Vous l'aurez sans doute remarqué sur la dernière ligne de l'exemple mais pour définir quand oscillateur commence on lui spécifie le temps actuel du contexte audio. Ce paramètre est envoyé pour la bonne raison que chaque nœud est en avance sur le temps du contexte audio. Pour faire simple l'API a le temps du buffer en avance sur contexte.
