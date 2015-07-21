@@ -1,16 +1,16 @@
 #Web-audio - Best Of Web 2015
 
-Le 5 juin 2015 à eu lieu le premier Best Of Web 2015 à Paris, un rassemblement des meilleurs Meetup de l'année. Cette article fait suite à celui de [stéphane blanchon sur le déroulement de la journée](http://blog.viseo-bt.com/meilleur-du-web-a-la-conference-best-web-2015/) et celui de [Jordane Grenat sur les Api Rest](https://stackedit.io/viewer#!provider=gist&gistId=2fcfe1a2c774c13e2466&filename=restWorld-bestOfWeb.md).
+Le 5 juin 2015 à eu lieu le premier Best Of Web 2015 à Paris, un rassemblement des meilleurs Meetup de l'année. Cet article fait suite à celui de [stéphane blanchon sur le déroulement de la journée](http://blog.viseo-bt.com/meilleur-du-web-a-la-conference-best-web-2015/) et celui de [Jordane Grenat sur les Api Rest](https://stackedit.io/viewer#!provider=gist&gistId=2fcfe1a2c774c13e2466&filename=restWorld-bestOfWeb.md).
 
-Dans cet article nous allons nous intéresser à la conférence Web Audio Now by Samuel Goldszmidt & Norbert Schnell. Les deux chercheurs de l'IR-CAM nous ont présenté leurs sujets de recherche. La première présentation de Samuel Goldszmidt portait sur l'état actuel de la web audio api, avec quelques exemples comme l'écriture d'une fonction qui joue des notes et cela en 18 lignes de codes ! La seconde parlait du projet CoSiMa. Cette seconde présentation ferra l'objet d'un autre billet.
+Dans cet article nous allons nous intéresser à la conférence Web Audio Now par les chercheurs Samuel Goldszmidt et Norbert Schnell. Les deux chercheurs de l'IR-CAM (Institut de recherche et coordination acoustique/musique) nous ont présenté leurs sujets de recherche. La première présentation de Samuel Goldszmidt portait sur l'état actuel de la web audio api, avec quelques exemples comme l'écriture d'une fonction qui joue des notes et cela en 18 lignes de codes ! La seconde parlait du projet CoSiMa, que je détaillerai dans un prochain billet.
 
 ##La web audio API
 ###L'histoire de l'audio dans le web
-Les prémices du son dans des pages web date de 1995 et à l'époque trois types de balises était disponible: bgsound, embed et applet. ce n'était pas l'idéal mais il faut bien un début. 
-1997, le flash est apparue avec un player et Flash Media Server, mais il n'existait toujours pas d'API Native.
-En 2008 la révolution du HTML5 et l'intégration d'une nouvelle balise <audio> et enfin en 2010 le W3C définie la Web Audio API. A l'heure où j’écris ces lignes [le document est actuellement en Editor's graph](http://webaudio.github.io/web-audio-api/) mais [reste parfaitement utilisable sur tous les navigateurs sauf IE ](http://caniuse.com/#search=web%20audio%20api), mais Edge implémentera la Web Audio API.
+Les prémices du son dans des pages web date de 1995 et à l'époque trois types de balises était disponibles : bgsound, embed et applet. ce n'était pas l'idéal mais il faut bien un début. 
+En 1997, le flash est apparu avec un player et Flash Media Server, mais il n'existait toujours pas d'API native.
+En 2008 la révolution du HTML5 et l'intégration d'une nouvelle balise <audio> et enfin en 2010 le W3C définie la Web Audio API. À l'heure où j’écris ces lignes [le document est actuellement en Editor's graph](http://webaudio.github.io/web-audio-api/) mais [reste parfaitement utilisable sur tous les navigateurs sauf IE](http://caniuse.com/#search=web%20audio%20api), mais Edge implémentera  la Web Audio API.
 ###La Web Audio API en détail
-L'API est Haut niveau qui permet un contrôle du son en JavaScript, elle repose sur le principe de routing modulaire. C'est à dire que le son possède une entrée auquel on va lui appliquer des nœuds audio pour obtenir le son en sortie. Un nœud audio peu par exemple correspondre à un filtre de certaines fréquences où un amplificateur, etc.
+L'API est de Haut niveau et elle permet un contrôle du son en JavaScript, elle repose sur le principe de routing modulaire. C'est à dire que le son possède une entrée auquel on va lui appliquer des nœuds audio pour obtenir le son en sortie. Un nœud audio peu par exemple correspondre à un filtre de certaines fréquences où un amplificateur, etc.
 
 #####Outils pour les développeurs
 Petit aparté: Firefox dispose d'un outil très pratique pour le web audio qui permet de visualiser tous les nœuds audio ainsi que leurs propriétés.
