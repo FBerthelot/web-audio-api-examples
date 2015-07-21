@@ -4,6 +4,11 @@ Le 5 juin 2015 à eu lieu le premier Best Of Web 2015 à Paris, un rassemblement
 
 Dans cet article nous allons nous intéresser à la conférence Web Audio Now par les chercheurs Samuel Goldszmidt et Norbert Schnell. Les deux chercheurs de l'IR-CAM (Institut de recherche et coordination acoustique/musique) nous ont présenté leurs sujets de recherche. La première présentation de Samuel Goldszmidt portait sur l'état actuel de la web audio api, avec quelques exemples comme l'écriture d'une fonction qui joue des notes et cela en 18 lignes de codes ! La seconde parlait du projet CoSiMa, que je détaillerai dans un prochain billet.
 
+##Prérequis
+Avant de commencer je pense qu'il est bon de reprendre un peu les bases de ce qu'est le son. Le son est une onde acoustique. Concrètement nos haut-parleur vibrent pour créer une onde acoustique. Voici une représentation du son: 
+![représentation](http://perceptionsonoretpe.free.fr/I/images/Fig_4.png)
+Plus l'amplitude du son est élevée plus le son sera perçut comme fort. On joue donc sur l'amplitude pour régler le volume. Avec la période il est possible de calculer la fréquence ( f=1/t), généralement on obtient la valeur de la fréquence en Hertz. Plus la fréquence est élevée plus le son est aiguë, plus c'est faible, plus c'est grave. La musique étant juste un assemblage en rythme de différents sons.
+
 ##La web audio API
 ###L'histoire de l'audio dans le web
 Les prémices du son dans des pages web date de 1995 et à l'époque trois types de balises était disponibles : bgsound, embed et applet. ce n'était pas l'idéal mais il faut bien un début. 
