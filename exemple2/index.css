@@ -1,0 +1,147 @@
+body, html {
+    background-color: #37474F;
+    height: 100%;
+    width: 100%;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+section {
+    margin: auto;
+}
+
+#piano ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+#piano .white-key {
+    border: 1px solid black;
+    background-color: white;
+    height: 240px;
+    width: 40px;
+    margin: 0;
+    position: relative;
+}
+#piano .black-key {
+    background-color: black;
+    height: 120px;
+    width: 35px;
+    position: relative;
+    top: -19px;
+    left: 25px;
+    color: white;
+    z-index: 5;
+}
+
+#piano .black-key span, #piano .white-key span{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    top: 220px;
+    width: 100%;
+}
+#piano .white-key .black-key span {
+    top: 100px;
+}
+
+/*Effets lors de l'appuie sur une touche */
+
+#piano .white-key.active {
+    height: 238px;
+}
+#piano .white-key.active span {
+    top: 219px;
+}
+
+#piano .white-key.active .black-key span {
+    top: 100px;
+}
+
+#piano .black-key.active {
+    height: 118px;
+}
+#piano .white-key .black-key.active span {
+    top: 99px;
+}
+
+/** Main buttons **/
+.menu-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #7986CB;
+    border: 1px solid #7986CB;
+}
+
+#param-btn {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+}
+
+#oscilo-btn {
+    position: fixed;
+    bottom: 15px;
+    right: 40px;
+}
+#oscilo-btn-close {
+    position: absolute;
+    top: 15px;
+    right: 40px;
+}
+#param-btn-close {
+    position: absolute;
+    top:15px;
+    right: 15px;
+}
+
+/** Params part **/
+.param-menu{
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 400px;
+    background-color: rgba(44,44,44, 0.8);
+    top: 0;
+    left: 0;
+}
+.param-menu.active{
+    display: block;
+}
+
+/** oscilloscope part **/
+/* pour le style d'après http://tympanus.net/Development/OffCanvasMenuEffects/cornermorph.html */
+
+#oscilloscope {
+    width: 80%;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+}
+
+.wave-menu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 210px;
+    background-color: rgba(44,44,44, 0.8);
+    bottom: 0;
+    left: 0;
+}
+
+.wave-menu.active{
+    display: block;
+}
