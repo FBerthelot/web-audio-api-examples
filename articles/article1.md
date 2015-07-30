@@ -51,8 +51,8 @@ Chaque nœud possède un ensemble de fonctions qui permettent de planifier le ch
 // Va augmenter la fréquence de 440Hz à 456Hz linéairement pendant 10 secondes 
 oscillator.frequency.linearRampToValueAtTime(456, audioContext.currentTime + 10);
 ```
-Il existe de nombreuses méthodes pour changer les attributs : setValueAtTime, linearRampToValueAtTime, exponentialRampToValueAtTime, setTargetAtTime, setValueCurveAtTime et cancelScheduledValues qui permet d'annuler tous les événements prévus. 
-//TODO mettre liens pour chaque méthode
+Il existe de nombreuses méthodes pour changer les attributs : [setValueAtTime](https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/setValueAtTime), [linearRampToValueAtTime](https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/linearRampToValueAtTime), [exponentialRampToValueAtTime](https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/exponentialRampToValueAtTime), [setTargetAtTime](https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/setTargetAtTime), [setValueCurveAtTime](https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/setValueCurveAtTime) et [cancelScheduledValues](https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/cancelScheduledValues).
+
 ####Les différents types de nœuds
 Nous avons vu jusqu'ici que deux types de nœud. Il en existe cependant plein d'autres:
 
