@@ -2,5 +2,5 @@
 
 ####Commande browser-sync pour lancer ce projet
 ```
-browser-sync start --server --files './**/*.js' --files './**/*.html'
+browser-sync start --server --files './**/*.js' --files './**/*.html' --files './**/*.css'
 ```
