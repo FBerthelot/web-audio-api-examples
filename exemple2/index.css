@@ -55,6 +55,9 @@ section {
 #piano .white-key .black-key span {
     top: 100px;
 }
+#piano em {
+    color: #FF1B00;
+}
 
 /*Effets lors de l'appuie sur une touche */
 
@@ -113,12 +116,20 @@ section {
     position: absolute;
     height: 100%;
     width: 400px;
-    background-color: rgba(44,44,44, 0.8);
+    background-color: rgba(44,44,44, 0.95);
     top: 0;
     left: 0;
+    padding: 20px;
+    color: #ffffff;
+    z-index: 50;
 }
 .param-menu.active{
     display: block;
+}
+
+.param-menu #mainCtrl{
+    display: flex;
+    flex-direction: column;
 }
 
 /** oscilloscope part **/

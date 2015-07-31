@@ -4,6 +4,8 @@
 'use strict';
 
 window.onload = function() {
+    window.piano.displayKeyAffectation(document.getElementById('octave').value);
+
     var audioContext = new window.AudioContext();
     /* volume node */
     var mainGain = audioContext.createGain();

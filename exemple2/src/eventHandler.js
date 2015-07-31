@@ -4,20 +4,20 @@
 'use strict';
 
 /**play notes with mouse and keyboard **/
-var mouseDownFreq, initialTarget;
+var mouseDownNote, initialTarget;
 var pianoDom = document.getElementById('piano');
 pianoDom.onmousedown = function(e) {
-    mouseDownFreq = parseFloat(e.target.getAttribute('data-frequency'));
+    mouseDownNote = e.target.getAttribute('id');
     initialTarget = e.target;
     initialTarget.classList.add('active');
-    window.piano.playNote(mouseDownFreq);
+    window.piano.playNote(notes[mouseDownNote]);
 };
 
 document.onmouseup = function() {
-    if(!mouseDownFreq && !initialTarget) { return; }
+    if(!mouseDownNote && !initialTarget) { return; }
     initialTarget.classList.remove('active');
-    window.piano.stopNote(mouseDownFreq);
-    mouseDownFreq = null;
+    window.piano.stopNote(notes[mouseDownNote]);
+    mouseDownNote = null;
     initialTarget = null;
 };
 
@@ -56,4 +56,7 @@ document.getElementById('param-btn-close').onclick = function() {
 
 document.getElementById('mainGain').onchange = function(e) {
     window.piano.mainGain.gain.value = e.target.value;
+};
+document.getElementById('octave').onchange = function(e) {
+    window.piano.displayKeyAffectation(e.target.value);
 };
