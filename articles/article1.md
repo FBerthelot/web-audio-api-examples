@@ -77,5 +77,5 @@ Bien que les spécifications W3C ne soient pas entièrement figées, la Web Audi
 
 ###Liens connexes
 * [Les slides de Samuel Goldszmidt de Best Of Web 2015](http://ouhouhsami.github.io/2015-06-05-bestofweb-paris/#1).
-* [Présentation de la Web API lors de dot.js de 2014](http://lanyrd.com/2014/dotjseu/sdgppz/) ainsi que [le lien vers les slides de cette conférence](http://soledadpenades.com/files/t/20141117_dotjs/#21)
+* [Présentation de la Web API lors de dot.js de 2014](http://lanyrd.com/2014/dotjseu/sdgppz/) ainsi que [le lien vers les slides de cette conférence](http://soledadpenades.com/files/t/20141117_dotjs/)
 * [Le site web de CoSiMa](http://cosima.ircam.fr/)
