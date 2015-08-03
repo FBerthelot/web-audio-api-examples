@@ -1,6 +1,6 @@
 #Web-audio - Best Of Web 2015
 
-Le 5 juin 2015 a eu lieu le premier Best Of Web 2015 à Paris, un rassemblement des meilleurs Meetup de l'année. Cet article fait suite à celui de [Stéphane Blanchon sur le déroulement de la journée](http://blog.viseo-bt.com/rest-world-best-of-web-2015/).
+Le 5 juin 2015 a eu lieu le premier Best Of Web 2015 à Paris, un rassemblement des meilleurs Meetup de l'année. Cet article fait suite à celui de [Stéphane Blanchon sur le déroulement de la journée](http://blog.viseo-bt.com/meilleur-du-web-a-la-conference-best-web-2015/) et celui de [Jordane Grenat sur les Api Rest](http://blog.viseo-bt.com/rest-world-best-of-web-2015/).
 
 Dans cet article nous allons nous intéresser à la conférence Web Audio Now par les chercheurs [Samuel Goldszmidt](https://twitter.com/ouhouhsami) et [Norbert Schnell](http://imtr.ircam.fr/imtr/Norbert_Schnell). Les deux chercheurs de l'IR-CAM (Institut de recherche et coordination acoustique/musique) nous ont présenté leurs sujets de recherche. La première présentation de Samuel Goldszmidt portait sur l'état actuel de la Web Audio API, avec quelques exemples comme l'écriture d'une fonction qui joue des notes et cela en 18 lignes de codes ! La seconde parlait du projet CoSiMa, que je détaillerai dans un prochain billet.
 
@@ -11,12 +11,12 @@ Plus l'amplitude du son est élevée et plus le son sera perçu comme fort. On j
 
 ##La Web Audio API
 ###L'histoire de l'audio dans le web
-Les prémices du son dans des pages web date de 1995. À l'époque trois types de balises était disponibles : bgsound, embed et applet. Les possibilitées était très restreinte. 
+Les prémices du son dans des pages web date de 1995. À l'époque trois types de balises était disponibles : bgsound, embed et applet. Les possibilités était très restreintes. 
 En 1997, le flash est apparu avec un player et Flash Media Server, mais il n'existait toujours pas d'API native.
 En 2008 c'est la révolution du HTML5 et l'intégration d'une nouvelle balise <audio>.
 Enfin, en 2010 le W3C définit la Web Audio API. À l'heure où j’écris ces lignes [le document est actuellement en Editor's draft](http://webaudio.github.io/web-audio-api/) mais [reste parfaitement utilisable sur tous les navigateurs sauf IE](http://caniuse.com/#search=web%20audio%20api); Edge implémentera cependant la Web Audio API.
 ###La Web Audio API en détails
-L'API est de haut niveau et elle permet un contrôle du son en JavaScript. Elle repose sur le principe de routing modulaire, c'est à dire que le son possède une entrée à laquelle on va appliquer des nœuds audio pour obtenir le son en sortie. Un nœud audio peut par exemple correspondre à un filtre de certaines fréquences où à un amplificateur, etc.
+L'API est de haut niveau et elle permet un contrôle du son en JavaScript. Elle repose sur le principe de routing modulaire, c'est à dire que le son possède une entrée à laquelle on va appliquer des nœuds audio pour obtenir le son en sortie. Un nœud audio peut par exemple correspondre à un filtre de certaines fréquences ou à un amplificateur, etc.
 
 #####Outils pour les développeurs
 Petit aparté : Firefox dispose d'un outil très pratique pour le Web Audio qui permet de visualiser tous les nœuds audio ainsi que leurs propriétés.
@@ -39,6 +39,7 @@ Enfin, comme la dernière ligne démarre l’oscillateur immédiatement, notre L
 Les fuites mémoires sont très facile à obtenir avec l'API. En effet, si vous perdez la référence vers un nœud il est impossible pour vous d'aller récupérer ce nœud. Par exemple, si vous exécutez le code de l'exemple au-dessus dans une fonction onClick d'un bouton, vous aurez à chaque clic un nouveau oscillateur de créé. Firefox vous montrera alors ce genre de graphiques :
 
 ![Exemple d'un graphique Firefox avec des fuites mémoires](https://raw.githubusercontent.com/FBerthelot/web-audio-api-examples/gh-pages/images/garbage_collector.png)
+
 Vous pouvez d'ailleurs tester à [cette adresse](http://fberthelot.github.io/web-audio-api-examples/exemple1) la fuite mémoire.
 
 ####L'API est en avance sur le temps
