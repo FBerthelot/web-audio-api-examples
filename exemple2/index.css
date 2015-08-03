@@ -9,6 +9,9 @@ button {
     outline: none;
 }
 
+.hide {
+    display: none;
+}
 
 .main-content {
     display: flex;
@@ -130,6 +133,10 @@ section {
 .param-menu #mainCtrl{
     display: flex;
     flex-direction: column;
+}
+
+.param-menu input[type="range"] {
+    width: 300px;
 }
 
 /** oscilloscope part **/
