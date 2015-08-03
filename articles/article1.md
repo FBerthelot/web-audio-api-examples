@@ -2,7 +2,7 @@
 
 Le 5 juin 2015 a eu lieu le premier Best Of Web 2015 à Paris, un rassemblement des meilleurs Meetup de l'année. Cet article fait suite à celui de [Stéphane Blanchon sur le déroulement de la journée](http://blog.viseo-bt.com/meilleur-du-web-a-la-conference-best-web-2015/) et celui de [Jordane Grenat sur les Api Rest](http://blog.viseo-bt.com/rest-world-best-of-web-2015/).
 
-Dans cet article nous allons nous intéresser à la conférence Web Audio Now par les chercheurs [Samuel Goldszmidt](https://twitter.com/ouhouhsami) et [Norbert Schnell](http://imtr.ircam.fr/imtr/Norbert_Schnell). Les deux chercheurs de l'IR-CAM (Institut de recherche et coordination acoustique/musique) nous ont présenté leurs sujets de recherche. La première présentation de Samuel Goldszmidt portait sur l'état actuel de la Web Audio API, avec quelques exemples comme l'écriture d'une fonction qui joue des notes et cela en 18 lignes de codes ! La seconde parlait du projet CoSiMa, que je détaillerai dans un prochain billet.
+Dans cet article nous allons nous intéresser à la conférence Web Audio Now par les chercheurs [Samuel Goldszmidt](https://twitter.com/ouhouhsami) et [Norbert Schnell](http://imtr.ircam.fr/imtr/Norbert_Schnell). Les deux chercheurs de l'IRCAM (Institut de recherche et coordination acoustique/musique) nous ont présenté leurs sujets de recherche. La première présentation de Samuel Goldszmidt portait sur l'état actuel de la Web Audio API, avec quelques exemples comme l'écriture d'une fonction qui joue des notes et cela en 18 lignes de codes ! La seconde parlait du projet CoSiMa, que je détaillerai dans un prochain billet.
 
 ##Prérequis
 Avant de commencer, je pense qu'il est bon de reprendre un peu les bases de ce qu'est le son. Le son est une onde acoustique. Concrètement, nos haut-parleurs vibrent pour créer une onde acoustique. Voici une représentation du son : 
@@ -58,9 +58,9 @@ Il existe de nombreuses méthodes pour changer les attributs : [setValueAtTime](
 Nous avons vu jusqu'ici que deux types de nœud. Il en existe cependant plein d'autres:
 
  - [GainNode](https://developer.mozilla.org/fr/docs/Web/API/GainNode), ces nœuds servent à amplifier ou diminuer le signal. Concrètement, ils servent à contrôler le son ;
- - [Delay](http://webaudio.github.io/web-audio-api/#the-delaynode-interface), ce type de nœud ralentit l'entré avant de le propager à la sortie. Ils peuvent servir à créer un écho ;
+ - [Delay](http://webaudio.github.io/web-audio-api/#the-delaynode-interface), ce type de nœud ralentit l'entrée avant de la propager à la sortie. Ils peuvent servir à créer un écho ;
  - [BiquadFilterNode](https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode), type de nœud qui créer un filtre audio. Pour plus d'information sur les filtres, [vous pouvez aller voir sur wikipédia](https://fr.wikipedia.org/wiki/Filtre_%28audio%29#Filtres_passe-haut_et_passe-bas);
- - [PannerNode](https://developer.mozilla.org/fr/docs/Web/API/AudioListener), permet de spatialiser le son. Il est effectivement d'ores et déjà possible de faire un bon FPS en JS avec un son 3D pour permettre aux joueurs de savoir d'où viennent les tirs !
+ - [PannerNode](https://developer.mozilla.org/fr/docs/Web/API/AudioListener), permet de spatialiser le son. Il est effectivement d'ores et déjà possible de faire un bon jeu de tir en JS avec un son 3D pour permettre aux joueurs de savoir d'où viennent les coups de feu !
  - [Convolver](http://webaudio.github.io/web-audio-api/#linear-effects-using-convolution), généralement utilisés pour faire de la réverbération, ils servent à reproduire l'ambiance d'une pièce ;
  - [SplitterNode](http://webaudio.github.io/web-audio-api/#the-channelsplitternode-interface), sert à séparer les différentes pistes d'une source audio, par exemple à partir d'une source stéréo on obtient en sortie deux sources : la droite et la gauche ;
  - [MergerNode](http://webaudio.github.io/web-audio-api/#the-channelmergernode-interface) fait exactement le contraire du nœud précédent ;
