@@ -100,3 +100,22 @@ window.piano.oscilatorType = 'sine';
 document.getElementById('oscilator_type').oninput = function(e) {
     window.piano.oscilatorType = e.target.value;
 };
+
+//Harmoniques
+window.piano.harmonique = {
+    isActive: document.getElementById('harmonique_toggle').checked,
+    number: parseInt(document.getElementById('harmonique_number').value)
+};
+
+document.getElementById('harmonique_toggle').onchange = function(e) {
+    if(e.target.checked) {
+        document.getElementById('harmonique_hparams').classList.remove('hide');
+    } else {
+        document.getElementById('harmonique_hparams').classList.add('hide');
+    }
+    window.piano.harmonique.isActive = e.target.checked;
+};
+
+document.getElementById('harmonique_number').oninput = function(e) {
+    window.piano.harmonique.number = parseInt(e.target.value);
+};

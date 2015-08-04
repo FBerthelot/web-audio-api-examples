@@ -23,6 +23,7 @@ window.onload = function() {
     window.piano.osciloscope();
 
     var oscillators = {};
+    var harmonique = {};
     var gain = {};
 
 
@@ -35,6 +36,24 @@ window.onload = function() {
 
             gain[freq] = audioContext.createGain();
             gain[freq].gain.value = 0.1;
+
+            if(window.piano.harmonique.isActive){
+                harmonique[freq] = [];
+                for(var i=0; i < window.piano.harmonique.number; i++) {
+                    harmonique[freq][i] = {
+                        oscillator: audioContext.createOscillator(),
+                        gain: audioContext.createGain()
+                    };
+                    harmonique[freq][i].oscillator.type = window.piano.oscilatorType;
+                    harmonique[freq][i].oscillator.frequency.value = freq * 2 * (i+1);
+                    harmonique[freq][i].oscillator.start(audioContext.currentTime);
+
+                    harmonique[freq][i].gain.gain.value = 1.0 / ((i+1)*2);
+
+                    harmonique[freq][i].oscillator.connect(harmonique[freq][i].gain);
+                    harmonique[freq][i].gain.connect(gain[freq]);
+                }
+            }
 
             oscillators[freq].connect(gain[freq]);
             gain[freq].connect(mainGain);
@@ -58,8 +77,14 @@ window.onload = function() {
                 oscillators[freq].stop(audioContext.currentTime);
             }
 
-            delete  oscillators[freq];
-            delete  gain[freq];
+            for(var i in harmonique[freq]) {
+                harmonique[freq][i].oscillator.stop(audioContext.currentTime);
+                delete harmonique[freq][i].oscillator;
+                delete harmonique[freq][i].gain;
+            }
+            delete harmonique[freq];
+            delete oscillators[freq];
+            delete gain[freq];
         }
     };
 };
