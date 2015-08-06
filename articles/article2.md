@@ -2,10 +2,10 @@
 
 Le 5 juin 2015 à eu lieu le premier Best Of Web 2015 à Paris, un rassemblement des meilleurs Meetup de l'année. Cette article fait suite à l'article de [présentation de la Web Audio API](https://github.com/FBerthelot/web-audio-api-examples/blob/gh-pages/the_post.md). Ici nous nous intéressons à une nœud spécifique de la Web-Audio API, les audioWorker.
 
-Une des fonctionnalité les plus attendu par les développeurs qui font du web audio sont les audio worker. Nous allons voir ici ce qu'apporte ces nœuds, en quoi ils sont différents des autres et surtout pourquoi la communauté JS est si excité a ce sujet.
+Une des fonctionnalité les plus attendu par les développeurs qui font du web audio sont les audio worker. Nous allons voir ici ce qu'apporte ces nœuds, en quoi ils sont différents des autres et surtout pourquoi la communauté JS est autant excité à ce sujet.
 
 ##Avant-propos
-Les audio worker sont toujours en cours de spécification, aucun browser ne les supportent actuellement. Cette article peut donc potentiellement décrire certaines fonctionnalités qui seront totalement différentes dans le futur. D'ailleurs si vous avez des idées pour améliorer les specs n'hésitez pas à aller en discuter [ici](https://github.com/WebAudio/web-audio-api/issues).
+Les audio worker sont toujours en cours de spécification, aucun browser ne les supportent actuellement. Cette article peut donc potentiellement décrire certaines fonctionnalités qui seront totalement différentes dans le futur. D'ailleurs si vous avez des idées pour améliorer les specs n'hésitez pas à aller en discuter sur [le fil github associé](https://github.com/WebAudio/web-audio-api/issues).
 
 ##Le principe
 Les Audio Workers sont des nœuds personnalisé, c'est à dire qu'ici nous avons le droit de modifier le signal bit par bit. Il est aussi possible de créer des paramètres spécifiques à ces nœuds, et tout comme les autres nœuds nous pouvons utiliser toutes les fonctions disponible pour les audio params comme [linearRampToValueAtTime](http://webaudio.github.io/web-audio-api/#methods-3) par exemple.
@@ -81,14 +81,14 @@ Or, le code à l’intérieur du ScriptProcessorNode est exécuté dans la file 
 Les code à l’intérieur des Web Audio Worker quand à eux s’exécutent dans la file d’exécution réservé à l'audio. La possibilité de bug audio à cause d'un rendering gourmant est alors nul !
 
 ###Asynchronisme incompatible avec l'Audio
-Quand un ScriptProcessorNode cherche a redéfinir sa sortie, la modification se fait asynchroniquement. Comme le nœud ne peux pas simplement attendre, le nœud insère de la latence. En effet, le nœud attend une certaine volumétrie de données (la taille du buffer) et ensuite fait les appels asynchrones entre les différentes files exécutions. Ensuite le nœud ajoute encore de la latence pour avoir le temps de traiter les données.
+Quand un ScriptProcessorNode cherche à redéfinir sa sortie, la modification se fait de manière asynchrone. Comme le nœud ne peux pas simplement attendre, le nœud insère de la latence. En effet, le nœud attend une certaine volumétrie de données (la taille du buffer) et ensuite fait les appels asynchrones entre les différentes files exécutions. Ensuite le nœud ajoute encore de la latence pour avoir le temps de traiter les données.
 
 Pour illustrer le propos, [le développeur de Google Chris Wilson](https://plus.google.com/+ChrisWilson/posts) explique que ce type de nœud inclue une latence d'environ 23ms pour un buffer de 512 et plus de 50ms pour un buffer de 1024 (qui est la valeur pas défaut).
 
-Avec les Web Audio Worker vu que le code est directement exécuté dans la file d’exécution de l'audio il n'y a pas d'appels transverses donc l'appel aux fonctions peuvent se faire de façon synchrone. La seule latence sera le temps d’exécution de notre code.
+Avec les Web Audio Worker, le code est directement exécuté dans la file d’exécution de l'audio. Il n'y a pas d'appels transverses, donc l'appel aux fonctions peut se faire de façon synchrone. La seule latence sera le temps d’exécution de notre code.
 
 ##Conclusion
-Les Web Audio Worker apporterons beaucoup plus de flexibilité dans notre manière décrire du code avec la Web Audio API et aussi beaucoup plus de performance. Le seul regret que l'on peut avoir c'est le fait que le code dans les scriptProcessorNode ne soit pas, dès le début exécuté dans la bonne file d'exécution dès le départ. Cela implique forcement que le scriptProcessorNode sera amené à disparaître. Il est d'ailleurs déjà *"deprecated"* dans la spec.
+Les Web Audio Worker apporterons beaucoup plus de flexibilité dans notre manière décrire du code avec la Web Audio API et apporterons aussi beaucoup plus de performance. Le seul regret que l'on peut avoir c'est le fait que le code dans les scriptProcessorNode ne soit pas exécuté dans la bonne file d'exécution. Cela aurai résolu pas mal de problème de performances. A cause de ça, le scriptProcessorNode sera amené à disparaître. Il est d'ailleurs déjà *"deprecated"* dans la spec. Mais c'est vrai qu'il est difficile de faire une spec parfaite dès le départ. 
 
 ####Liens utiles
 - [La spec W3C](http://webaudio.github.io/web-audio-api/#the-audioworker-interface)
