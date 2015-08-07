@@ -12,7 +12,7 @@ Les Audio Workers sont des nœuds personnalisé, c'est à dire qu'ici nous avons
 
 De plus les Web Worker possède un système de messagerie. Il est en effet possible d'envoyer des messages à chaque nœud du même type.  système de messagerie suggère que chaque instance partage un tronc commun, et il s'appelle le [AudioWorkerGlobalScope](http://webaudio.github.io/web-audio-api/#idl-def-AudioWorkerGlobalScope).
 
-##Comparaison avec ce que l'on a déjà:
+##Comparaison avec ce que l'on a déjà
 ###ScriptProcessorNode
 Actuellement pour avoir un nœud qui fait des traitements spécifique nous avions le nœud ScriptProcessorNode. Ce Nœud à l’instar de l'AnalyserNode marche avec un buffer. Tandis que le buffer de l'AnalyserNode est en lecture seule, celui du ScripProcessorNode est en écriture. Voici un exemple de code pour multiplier l'amplitude par 2 d'un signal :
 ```javascript
