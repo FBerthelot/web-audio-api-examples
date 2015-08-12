@@ -15,9 +15,42 @@ window.onload = function() {
     /* osiciloscope !!*/
     var analyser = audioContext.createAnalyser();
 
+    var convolver = audioContext.createConvolver();
+    var concertHallBuffer;
+    function test() {
+        if(window.piano.convolerAudioData) {
+            audioContext.decodeAudioData(window.piano.convolerAudioData, function (buffer) {
+                concertHallBuffer = buffer;
+                var soundSource = audioContext.createBufferSource();
+                soundSource.buffer = concertHallBuffer;
+                convolver.buffer = concertHallBuffer;
+            }, function (e) {
+                "Error with decoding audio data" + e.err
+            });
+        }
+        else {
+            setTimeout(test, 1500);
+        }
+    }
+    test();
 
     analyser.connect(audioContext.destination);
-    mainGain.connect(analyser);
+
+    function connectingNodes(convoler) {
+        mainGain.disconnect();
+        convolver.disconnect();
+        if (convoler) {
+            mainGain.connect(convolver);
+            convolver.connect(analyser);
+        }
+        else {
+            convolver.connect(analyser);
+        }
+    }
+    connectingNodes(document.getElementById('convoler').checked);
+    document.getElementById('convoler').onchange = function(e) {
+        connectingNodes(e.target.checked);
+    };
 
     window.piano.analyser = analyser;
     window.piano.osciloscope();
@@ -25,7 +58,6 @@ window.onload = function() {
     var oscillators = {};
     var harmonique = {};
     var gain = {};
-
 
     window.piano.playNote = function playNote(freq){
         if(!oscillators[freq]) {
