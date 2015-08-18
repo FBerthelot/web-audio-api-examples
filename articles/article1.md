@@ -14,9 +14,9 @@ Plus l'amplitude du son est élevée et plus le son sera perçu comme fort. On j
 Les prémices du son dans des pages web date de 1995. À l'époque trois types de balises était disponibles : bgsound, embed et applet. Les possibilités étaient très restreintes. 
 En 1997, le flash est apparu avec un player et Flash Media Server, mais il n'existait toujours pas d'API native.
 En 2008, c'est la révolution du HTML5 et l'intégration d'une nouvelle balise <audio>.
-Enfin, en 2010 le W3C définit la Web Audio API. À l'heure où j’écris ces lignes [le document est actuellement en Editor's draft](http://webaudio.github.io/web-audio-api/) mais [reste parfaitement utilisable sur tous les navigateurs sauf IE](http://caniuse.com/#search=web%20audio%20api). Edge implémentera cependant la Web Audio API.
+Enfin, en 2010 le W3C définit la Web Audio API. À l'heure où j’écris ces lignes [le document est actuellement en Editor's draft](http://webaudio.github.io/web-audio-api/) mais [reste parfaitement utilisable sur tous les navigateurs sauf IE](http://caniuse.com/#search=web%20audio%20api). Edge implémente cependant la Web Audio API.
 ###La Web Audio API en détails
-L'API est de haut niveau et elle permet un contrôle du son en JavaScript. Elle repose sur le principe de routing modulaire, c'est à dire que le son possède une entrée à laquelle on va appliquer des nœuds audio pour obtenir le son en sortie. Un nœud audio peut par exemple correspondre à un filtre de certaines fréquences ou à un amplificateur, etc.
+L'API est de haut niveau et elle permet un contrôle du son en JavaScript. Elle repose sur le principe de routing modulaire, c'est-à-dire que le son possède une entrée à laquelle on va appliquer des nœuds audio pour obtenir le son en sortie. Un nœud audio peut par exemple correspondre à un filtre de certaines fréquences ou à un amplificateur, etc.
 
 #####Outils pour les développeurs
 Petit aparté : Firefox dispose d'un outil très pratique pour le Web Audio qui permet de visualiser tous les nœuds audio ainsi que leurs propriétés.
