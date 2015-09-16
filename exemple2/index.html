@@ -2,18 +2,207 @@
 <html>
 <head lang="fr">
     <meta charset="UTF-8">
-    <title>Exemple 2</title>
+    <title>My little piano</title>
+    <link rel="stylesheet" type="text/css" href="../style/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./index.css">
 </head>
     <body>
-        <!--<button data-frequency="440" name="la" id="la">LA</button>
-        <button data-frequency="466" name="si" id="si">SI</button>
-        <button data-frequency="494" name="do" id="do">DO</button>
-        <button data-frequency="523" name="re" id="re">RE</button>
-        <button data-frequency="554" name="mi" id="mi">MI</button>
-        <button data-frequency="587" name="fa" id="fa">FA</button>
-        <button data-frequency="622" name="sol" id="sol">SOL</button>
-        <button data-frequency="659" name="la2" id="la2">la2</button>-->
+        <div class="main-content">
+            <section id="piano">
+                <ul>
+                    <li id="do0" class="white-key">
+                        <span>Q</span>
+                        <div id="dod0" class="black-key"><span>Z</span></div>
+                    </li>
+                    <li id="re0" class="white-key">
+                        <span>S</span>
+                        <div id="red0" class="black-key"><span>E</span></div>
+                    </li>
+                    <li id="mi0" class="white-key"><span>D</span></li>
+                    <li id="fa0" class="white-key">
+                        <span>F</span>
+                        <div id="fad0" class="black-key"><span>T</span></div>
+                    </li>
+                    <li id="sol0" class="white-key">
+                        <span>G</span>
+                        <div id="sold0" class="black-key"><span>Y</span></div>
+                    </li>
+                    <li id="la0" class="white-key">
+                        <span>H</span>
+                        <div id="lad0" class="black-key"><span>U</span></div>
+                    </li>
+                    <li id="si0" class="white-key"><span>J</span></li>
 
+
+                    <li id="do1" class="white-key">
+                        <span>K</span>
+                        <div id="dod1" class="black-key"><span>O</span></div>
+                    </li>
+                    <li id="re1" class="white-key">
+                        <span>L</span>
+                        <div id="red1" class="black-key"><span>P</span></div>
+                    </li>
+                    <li id="mi1" class="white-key"><span>M</span></li>
+                    <li id="fa1" class="white-key">
+                        <span>ù</span>
+                        <div id="fad1" class="black-key"><span>^</span></div>
+                    </li>
+                    <li id="sol1" class="white-key">
+                        <span>*</span>
+                        <div id="sold1" class="black-key"><span>$</span></div>
+                    </li>
+                    <li id="la1" class="white-key">
+                        <span>n</span>
+                        <div id="lad1" class="black-key"><span>,</span></div>
+                    </li>
+                    <li id="si1" class="white-key"><span>;</span></li>
+
+
+                    <li id="do2" class="white-key">
+                        <span>DO</span>
+                        <div id="dod2" class="black-key"><span>DO#</span></div>
+                    </li>
+                    <li id="re2" class="white-key">
+                        <span>RÉ</span>
+                        <div id="red2" class="black-key"><span>RÉ#</span></div>
+                    </li>
+                    <li id="mi2" class="white-key"><span>MI</span></li>
+                    <li id="fa2" class="white-key">
+                        <span>FA</span>
+                        <div id="fad2" class="black-key"><span>FA#</span></div>
+                    </li>
+                    <li id="sol2" class="white-key">
+                        <span>SOL</span>
+                        <div id="sold2" class="black-key"><span>LAb</span></div>
+                    </li>
+                    <li id="la2" class="white-key">
+                        <span>LA</span>
+                        <div id="lad2" class="black-key"><span>LA#</span></div>
+                    </li>
+                    <li id="si2" class="white-key"><span>SI</span></li>
+
+                    <li id="do3" class="white-key">
+                        <span>DO</span>
+                        <div id="dod3" class="black-key"><span>DO#</span></div>
+                    </li>
+                    <li id="re3" class="white-key">
+                        <span>RÉ</span>
+                        <div id="red3" class="black-key"><span>RÉ#</span></div>
+                    </li>
+                    <li id="mi3" class="white-key"><span>MI</span></li>
+                    <li id="fa3" class="white-key">
+                        <span>FA</span>
+                        <div id="fad3" class="black-key"><span>FA#</span></div>
+                    </li>
+                    <li id="sol3" class="white-key">
+                        <span>SOL</span>
+                        <div id="sold3" class="black-key"><span>LAb</span></div>
+                    </li>
+                    <li id="la3" class="white-key">
+                        <span>LA</span>
+                        <div id="lad3" class="black-key"><span>LA#</span></div>
+                    </li>
+                    <li id="si3" class="white-key"><span>SI</span></li>
+
+                    <li id="do4" class="white-key">
+                        <span>DO</span>
+                        <div id="dod4" class="black-key"><span>DO#</span></div>
+                    </li>
+                    <li id="re4" class="white-key">
+                        <span>RÉ</span>
+                        <div id="red4" class="black-key"><span>RÉ#</span></div>
+                    </li>
+                    <li id="mi4" class="white-key"><span>MI</span></li>
+                    <li id="fa4" class="white-key">
+                        <span>FA</span>
+                        <div id="fad4" class="black-key"><span>FA#</span></div>
+                    </li>
+                    <li id="sol4" class="white-key">
+                        <span>SOL</span>
+                        <div id="sold4" class="black-key"><span>LAb</span></div>
+                    </li>
+                    <li id="la4" class="white-key">
+                        <span>LA</span>
+                        <div id="lad4" class="black-key"><span>LA#</span></div>
+                    </li>
+                    <li id="si4" class="white-key"><span>SI</span></li>
+
+                    <li id="do5" class="white-key">
+                        <span>DO</span>
+                        <div id="dod5" class="black-key"><span>DO#</span></div>
+                    </li>
+                    <li id="re5" class="white-key">
+                        <span>RÉ</span>
+                        <div id="red5" class="black-key"><span>RÉ#</span></div>
+                    </li>
+                    <li id="mi5" class="white-key"><span>MI</span></li>
+                    <li id="fa5" class="white-key">
+                        <span>FA</span>
+                        <div id="fad5" class="black-key"><span>FA#</span></div>
+                    </li>
+                    <li id="sol5" class="white-key">
+                        <span>SOL</span>
+                        <div id="sold5" class="black-key"><span>LAb</span></div>
+                    </li>
+                    <li id="la5" class="white-key">
+                        <span>LA</span>
+                        <div id="lad5" class="black-key"><span>LA#</span></div>
+                    </li>
+                    <li id="si5" class="white-key"><span>SI</span></li>
+                </ul>
+            </section>
+
+            <button id="oscilo-btn" class="menu-btn"><img src="./img/data77.png" alt="show oscilloscope"></button>
+            <button id="param-btn" class="menu-btn"><img src="./img/three115.png" alt="show params"></button>
+        </div>
+
+        <section class="param-menu">
+            <div id="mainCtrl">
+                <label for="mainGain">Volume</label><input type="range" value="1" max="2" min="0" step="0.05" id="mainGain">
+                <label for="mainGain">octaves</label><input type="range" value="2" max="4" min="0" step="1" id="octave">
+            </div>
+            <div id="adsr">
+                <label for="adsrToggle">Attack Decay Sustain Release</label><input id="adsrToggle" name="adsrToggle" type="checkbox"/>
+                <div class="hide" id="adsrParams">
+                    <label for="attack">Attack</label><input type="range" value="0.1" max="1" min="0" step="0.001" id="attack">
+                    <label for="decay">Decay</label><input type="range" value="0.05" max="0.5" min="0" step="0.001" id="decay">
+                    <label for="max_intensity">Max Intensity</label><input type="range" value="1.5" max="3" min="1" step="0.05" id="max_intensity">
+                    <label for="release">Release</label><input type="range" value="0.3" max="1" min="0" step="0.001" id="release">
+                </div>
+            </div>
+            <div id="oscilator-params">
+                <label for="oscilator_type">Oscilator Type</label>
+                <select name="oscilator_type" id="oscilator_type">
+                    <option value="sine">Sine</option>
+                    <option value="square">Square</option>
+                    <option value="sawtooth">Sawtooth</option>
+                    <option value="triangle">Triangle</option>
+                </select>
+            </div>
+            <div id="harmonique-params">
+                <label for="harmonique_toggle">harmonique</label><input id="harmonique_toggle" name="harmonique_toggle" type="checkbox"/>
+                <div class="hide" id="harmonique_hparams">
+                    <label for="harmonique_number">Number of harmonique</label><input id="harmonique_number" name="harmonique_number" type="range" value="2" max="30" min="0" step="1"/>
+                </div>
+            </div>
+            <div id="convoler-params">
+                <label for="convoler">convoler</label><input id="convoler" name="convoler" type="checkbox"/>
+            </div>
+            <button id="param-btn-close" class="menu-btn"><img src="./img/cross106.png" alt="close params"></button>
+        </section>
+
+        <section class="wave-menu">
+            <canvas id="oscilloscope"></canvas>
+            <button id="oscilo-btn-close" class="menu-btn"><img src="./img/cross106.png" alt="hide oscilloscope"></button>
+        </section>
+
+        <script src="src/notes.js"></script>
+        <script src="src/touches.js"></script>
+        <script src="src/keyAffectation.js"></script>
+        <script src="src/external_ressources.js"></script>
+        <script src="src/displayKeyAffectation.js"></script>
+        <script src="src/eventHandler.js"></script>
+        <script src="src/oscilloscope.js"></script>
         <script src="index.js"></script>
     </body>
 </html>

@@ -1,0 +1,54 @@
+body, html {
+    background-color: #37474F;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    color: #ECEEF1;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul {
+    text-decoration: none;
+}
+
+section {
+    padding: 4%;
+}
+
+.title {
+    color: #ECEEF1;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+#example ul, #article ul {
+    list-style:  none;
+    display: flex;
+    flex-direction: row;
+}
+
+#example ul li, #article ul li {
+    display: flex;
+    border-radius: 30px;
+    width: 200px;
+    height: 100px;
+    background: #ECEEF1;
+    color: #3C4C53;
+    border: 1px solid #3C4C53;
+    margin-right: 20px;
+}
+
+
+#example ul li a, #article ul li a {
+    text-decoration: none;
+    margin: auto;
+    color: #3C4C53;
+}
