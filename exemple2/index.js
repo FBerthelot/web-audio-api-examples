@@ -16,7 +16,7 @@ window.onload = function() {
     var analyser = audioContext.createAnalyser();
 
     var convolver = audioContext.createConvolver();
-    var concertHallBuffer;
+    /*var concertHallBuffer;
     function test() {
         if(window.piano.convolerAudioData) {
             audioContext.decodeAudioData(window.piano.convolerAudioData, function (buffer) {
@@ -32,7 +32,7 @@ window.onload = function() {
             setTimeout(test, 1500);
         }
     }
-    test();
+    test();*/
 
     analyser.connect(audioContext.destination);
 
@@ -44,7 +44,7 @@ window.onload = function() {
             convolver.connect(analyser);
         }
         else {
-            convolver.connect(analyser);
+            mainGain.connect(analyser);
         }
     }
     connectingNodes(document.getElementById('convoler').checked);
