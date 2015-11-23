@@ -10,7 +10,7 @@ Les audio workers sont toujours en cours de spécification, aucun browser ne les
 ##Le principe
 Les Audio Workers sont des nœuds personnalisés, c'est à dire qu'ici nous avons le droit de modifier le signal bit par bit. Il est aussi possible de créer des paramètres spécifiques à ces nœuds, et tout comme les autres nœuds nous pouvons utiliser toutes les fonctions disponibles pour les audio params comme [linearRampToValueAtTime](http://webaudio.github.io/web-audio-api/#methods-3) par exemple.
 
-De plus les Web Workers possèdent un système de messagerie. Il est en effet possible d'envoyer des messages à chaque nœud du même type.  système de messagerie suggère que chaque instance partage un tronc commun, et il s'appelle le [AudioWorkerGlobalScope](http://webaudio.github.io/web-audio-api/#idl-def-AudioWorkerGlobalScope).
+De plus les Web Workers possèdent un système de messagerie. Il est en effet possible d'envoyer des messages à chaque nœud du même type. Le système de messagerie suggère que chaque instance partage un tronc commun, et il s'appelle le [AudioWorkerGlobalScope](http://webaudio.github.io/web-audio-api/#idl-def-AudioWorkerGlobalScope).
 
 ##Comparaison avec ce que l'on a déjà
 ###ScriptProcessorNode
